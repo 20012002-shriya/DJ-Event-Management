@@ -1,1 +1,1 @@
-# Harpanthpreet-DJ-Event-Management
+# DJ-Event-Management
