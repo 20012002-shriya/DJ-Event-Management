@@ -4,184 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ & Event Management</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(to bottom, black, #1a1a1a);
         }
 
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
             text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 0.5rem;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .hero h2 {
             font-size: 3rem;
             margin: 0;
         }
 
-        .services, .contact {
-            padding: 2rem;
+        header p {
+            font-size: 1.2rem;
+            margin: 5px 0 0;
+        }
+
+        .banner {
             text-align: center;
+            padding: 40px 20px;
         }
 
-        .services h3, .contact h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        .banner img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 15px;
         }
 
-        .services .cards {
+        .services {
+            text-align: center;
+            padding: 40px 20px;
+            background: #262626;
+            border-radius: 15px;
+            margin: 30px 15px;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .services p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .service-list {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 300px;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card h4 {
-            margin: 0.5rem 0;
-        }
-
-        .card p {
-            color: #666;
-        }
-
-        .contact form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact input, .contact textarea, .contact button {
-            padding: 0.8rem;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact button {
+        .service-item {
             background: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1 1 calc(25% - 40px);
+            max-width: calc(25% - 40px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
-        .contact button:hover {
-            background: #555;
+        .service-item:hover {
+            background: #444;
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
         footer {
             text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
         }
 
         footer p {
             margin: 0;
-            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>DJ & Event Management</h1>
+        <p>Make your every event special with us!</p>
     </header>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="hero">
-        <h2>Let Us Make Your Event Unforgettable</h2>
+    <div class="banner">
+        <img src="https://via.placeholder.com/800x400?text=Music+System" alt="Music System">
     </div>
 
-    <section id="services" class="services">
-        <h3>Our Services</h3>
-        <div class="cards">
-            <div class="card">
-                <h4>DJ Services</h4>
-                <p>High-quality sound and lighting to make your party come alive.</p>
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>We cater to all your event needs with a personal touch.</p>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Birthday Party</h3>
+                <p>Unforgettable parties with the best music and vibes.</p>
             </div>
-            <div class="card">
-                <h4>Event Planning</h4>
-                <p>From birthdays to corporate events, we handle it all.</p>
+            <div class="service-item">
+                <h3>Wedding</h3>
+                <p>Make your special day even more magical with us.</p>
             </div>
-            <div class="card">
-                <h4>Custom Themes</h4>
-                <p>Personalized event themes to match your vision.</p>
+            <div class="service-item">
+                <h3>Naming Ceremony</h3>
+                <p>Celebrate new beginnings with joy and elegance.</p>
+            </div>
+            <div class="service-item">
+                <h3>Other Occasions</h3>
+                <p>From corporate events to private parties, we do it all.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h3>Contact Us</h3>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
     <footer>
-        <p>&copy; 2025 DJ & Event Management. All Rights Reserved.</p>
+        <p>Contact: Harpanthpreet Singh - +44 7424702564</p>
     </footer>
 </body>
 </html>
